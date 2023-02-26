@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public bool hasPowerup;
     private float powerupStrength = 15.0f;
     public GameObject powerupIndicator;
+    public float jumpForce = 2.0f;
+    private bool onGround = true;
+    public float fallMultiplier = 2.0f;
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
@@ -22,6 +25,20 @@ public class PlayerController : MonoBehaviour
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
         float forwardInput = Input.GetAxis("Vertical");
         playerRB.AddForce(focalPoint.transform.forward * speed * forwardInput);
+
+        if (Input.GetKeyDown(KeyCode.Space) == true && onGround == true)
+        {
+            onGround = false;
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (playerRB.velocity.y < 0)
+        {
+            playerRB.velocity += Vector3.up * Physics.gravity.y * fallMultiplier * Time.deltaTime;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,5 +68,15 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collide with " + collision.gameObject.name + " with powerup set to " + hasPowerup);
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        onGround = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        onGround = false;
     }
 }
