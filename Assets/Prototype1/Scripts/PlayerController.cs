@@ -13,6 +13,10 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 2.0f;
     private bool onGround = true;
     public float fallMultiplier = 2.0f;
+
+    public float timeSpeed = 1;
+    public GameObject slowdownIndicator;
+    public bool gotPowerup;
     void Start()
     {
         playerRB = GetComponent<Rigidbody>();
@@ -50,8 +54,17 @@ public class PlayerController : MonoBehaviour
             powerupIndicator.gameObject.SetActive(true);
             StartCoroutine(PowerUpCountdownRoutine());
         }
-    }
 
+        if (other.CompareTag("SlowTime"))
+        {
+            gotPowerup = true;
+            Time.timeScale = timeSpeed = 2f;
+            Destroy(other.gameObject);
+            slowdownIndicator.gameObject.SetActive(true);
+            StartCoroutine(SlowDownTimeCountdownRoutine());
+        }
+    }
+     
     IEnumerator PowerUpCountdownRoutine()
     {
         yield return new WaitForSeconds(7);
@@ -68,6 +81,14 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collide with " + collision.gameObject.name + " with powerup set to " + hasPowerup);
             enemyRigidbody.AddForce(awayFromPlayer * powerupStrength, ForceMode.Impulse);
         }
+    }
+
+    IEnumerator SlowDownTimeCountdownRoutine()
+    {
+        yield return new WaitForSeconds(3);
+        Time.timeScale = timeSpeed = 1f;
+        slowdownIndicator.gameObject.SetActive(false);
+        gotPowerup = false;
     }
 
     private void OnCollisionStay(Collision collision)

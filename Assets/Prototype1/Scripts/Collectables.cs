@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
-    private int count = 0;
+    private int count;
     public TextMeshProUGUI countText;
     public GameObject barrier;
     public GameObject barrier2;
@@ -20,7 +20,7 @@ public class Collectables : MonoBehaviour
         {
             Destroy(gameObject);
             count++;
-            countText.GetComponent<TextMeshProUGUI>().text = "Stars Collected: " + count;
+            countText.text = "Stars: " + count;
         }
 
         if (count == 8)
