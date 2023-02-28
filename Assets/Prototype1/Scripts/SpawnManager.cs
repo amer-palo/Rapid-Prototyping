@@ -5,21 +5,13 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyOne, enemyTwo, enemyThree, enemyFour, enemyFive, enemySix, enemySeven, enemyEight, bossEnemey;
+    public GameObject enemy;
 
     void OnTriggerEnter(Collider other)
     {
        if(other.CompareTag("Player"))
        {
-          enemyOne.SetActive(true);
-          enemyTwo.SetActive(true);
-          enemyThree.SetActive(true);
-          enemyFour.SetActive(true);
-          enemyFive.SetActive(true);
-          enemySix.SetActive(true);
-          enemySeven.SetActive(true);
-          enemyEight.SetActive(true);
-          bossEnemey.SetActive(true);
+          enemy.SetActive(true);
        }
     }
 
