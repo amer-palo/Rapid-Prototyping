@@ -1,10 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject enemyOne, enemyTwo, enemyThree, enemyFour, enemyFive, enemySix, enemySeven, enemyEight, bossEnemey;
+
+    void OnTriggerEnter(Collider other)
+    {
+       if(other.CompareTag("Player"))
+       {
+          enemyOne.SetActive(true);
+          enemyTwo.SetActive(true);
+          enemyThree.SetActive(true);
+          enemyFour.SetActive(true);
+          enemyFive.SetActive(true);
+          enemySix.SetActive(true);
+          enemySeven.SetActive(true);
+          enemyEight.SetActive(true);
+          bossEnemey.SetActive(true);
+       }
+    }
+
+
+    /*public GameObject enemyPrefab;
     private float spawnRange = 9.0f;
     public int enemyCount;
     public int waveNumber = 1;
@@ -40,4 +60,5 @@ public class SpawnManager : MonoBehaviour
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
     }
+    */
 }

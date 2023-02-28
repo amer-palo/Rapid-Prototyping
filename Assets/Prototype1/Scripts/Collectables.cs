@@ -6,7 +6,6 @@ using UnityEngine;
 public class Collectables : MonoBehaviour
 {
     private int count;
-    public TextMeshProUGUI countText;
     public GameObject barrier;
     public GameObject barrier2;
     void Update()
@@ -18,12 +17,11 @@ public class Collectables : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            CountText.count += 1;
             Destroy(gameObject);
-            count++;
-            countText.text = "Stars: " + count;
         }
 
-        if (count == 8)
+        if (CountText.count == 8)
         {
             barrier.SetActive(false);
             barrier2.SetActive(false);
