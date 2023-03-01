@@ -6,7 +6,12 @@ using UnityEngine;
 public class GameBehaviour : AM.Behaviour
 {
     protected static UIManager _UI { get { return UIManager.Instance; } }
+
+    protected static GameManager _GAME { get { return GameManager.Instance; } }
+
+    protected static Timer _TIMER { get { return Timer.Instance; } }
 }
+
 //
 // Instanced GameBehaviour
 //

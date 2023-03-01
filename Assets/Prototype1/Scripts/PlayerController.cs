@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
-        float forwardInput = Input.GetAxis("Vertical");
+        float forwardInput = Input.GetAxis("Vertical"); 
         playerRB.AddForce(focalPoint.transform.forward * speed * forwardInput);
 
         if (Input.GetKeyDown(KeyCode.Space) == true && onGround == true)

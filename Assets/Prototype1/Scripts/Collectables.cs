@@ -8,6 +8,9 @@ public class Collectables : MonoBehaviour
     private int count;
     public GameObject barrier;
     public GameObject barrier2;
+    public TextMeshProUGUI starsText;
+    public TextMeshProUGUI bossText;
+
     void Update()
     {
         transform.localRotation = Quaternion.Euler(180f, Time.time * 100f, 0);
@@ -25,6 +28,8 @@ public class Collectables : MonoBehaviour
         {
             barrier.SetActive(false);
             barrier2.SetActive(false);
+            //starsText.SetActive(false);
+            //bossText.SetActive(true);
         }
       
     }
