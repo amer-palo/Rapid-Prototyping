@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4046810503090249029, guid: 96616597459d60a4b85687af2a425460, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4046810503090249029, guid: 96616597459d60a4b85687af2a425460, type: 3}
       propertyPath: m_LocalPosition.x
@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 415040, guid: f20d096cd65070b4a89b6957463d432d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 415040, guid: f20d096cd65070b4a89b6957463d432d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -621,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7382815964509602841, guid: 3fd5555088952419ebf0eb82e9096fa5, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7382815964509602841, guid: 3fd5555088952419ebf0eb82e9096fa5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -960,7 +960,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &267173959
 MonoBehaviour:
@@ -991,7 +991,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4046810503090249029, guid: 96616597459d60a4b85687af2a425460, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4046810503090249029, guid: 96616597459d60a4b85687af2a425460, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1198,6 +1198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!65 &396571381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1838,6 +1840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!1 &731897709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +1887,7 @@ Transform:
   m_Children:
   - {fileID: 1211419928}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &731897712
 MonoBehaviour:
@@ -2082,6 +2086,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!65 &805915253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2178,7 +2184,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4046810503090249029, guid: 96616597459d60a4b85687af2a425460, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4046810503090249029, guid: 96616597459d60a4b85687af2a425460, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2714,7 +2720,7 @@ Transform:
   - {fileID: 805915251}
   - {fileID: 1770732529}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1007477482
 GameObject:
@@ -2783,7 +2789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -2885,7 +2891,7 @@ Transform:
   - {fileID: 1648861358}
   - {fileID: 1729751469}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149166252
 GameObject:
@@ -3216,7 +3222,7 @@ RectTransform:
   m_Children:
   - {fileID: 761536979}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3418,7 +3424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4428908044626120, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -3523,6 +3529,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!65 &1367614744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4236,6 +4244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!65 &1744768920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4348,6 +4358,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!65 &1770732531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4571,6 +4583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!65 &1808658090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4704,7 +4718,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1923426858
 PrefabInstance:
@@ -4816,7 +4830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5500083604694377232, guid: ede5a207b2d26a04fb53bee30a400665, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5500083604694377232, guid: ede5a207b2d26a04fb53bee30a400665, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5171,6 +5185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 0}
   barrier2: {fileID: 1853490342}
+  starsText: {fileID: 0}
+  bossText: {fileID: 0}
 --- !u!65 &2089168054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5424,15 +5440,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5831814716121893815, guid: 363a8f737719f4d2eafb35f885f3706f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5831814716121893815, guid: 363a8f737719f4d2eafb35f885f3706f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5831814716121893815, guid: 363a8f737719f4d2eafb35f885f3706f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5831814716121893815, guid: 363a8f737719f4d2eafb35f885f3706f, type: 3}
       propertyPath: m_LocalPosition.z
