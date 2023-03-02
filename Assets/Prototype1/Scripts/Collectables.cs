@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class Collectables : MonoBehaviour
 {
-    private int count;
+    public int count;
     public GameObject barrier;
-    public GameObject barrier2;
-    public TextMeshProUGUI starsText;
-    public TextMeshProUGUI bossText;
+    public GameObject starsText;
+    public GameObject bossText;
 
     void Update()
     {
@@ -24,12 +23,11 @@ public class Collectables : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (CountText.count == 8)
+        if (CountText.count == 7)
         {
             barrier.SetActive(false);
-            barrier2.SetActive(false);
-            //starsText.SetActive(false);
-            //bossText.SetActive(true);
+            starsText.SetActive(false);
+            bossText.SetActive(true);
         }
       
     }

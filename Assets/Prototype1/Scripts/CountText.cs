@@ -10,7 +10,7 @@ public class CountText : MonoBehaviour
 
     void Update()
     {
-        countText.GetComponent<TextMeshProUGUI>().text = "Stars: " + count;
+        countText.GetComponent<TextMeshProUGUI>().text = "Stars: " + count + "/7";
     }     
     
 }

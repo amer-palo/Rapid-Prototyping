@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRB;
-    public float speed = 3.0f;
+    public float speed = 8.0f;
     private GameObject focalPoint;
     public bool hasPowerup;
     private float powerupStrength = 15.0f;
@@ -15,8 +15,7 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier = 2.0f;
     public GameObject deathUI;
 
-    public float timeSpeed = 1;
-    public GameObject slowdownIndicator;
+    public GameObject pauseEnemyIndicator;
     public bool gotPowerup;
     void Start()
     {
@@ -27,9 +26,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pauseEnemyIndicator.transform.position = transform.position + new Vector3(0, 0.2f, 0);
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
-        float forwardInput = Input.GetAxis("Vertical"); 
-        playerRB.AddForce(focalPoint.transform.forward * speed * forwardInput);
+        //float forwardInput = Input.GetAxis("Vertical"); 
+        //playerRB.AddForce(focalPoint.transform.forward * speed * forwardInput);
 
         if (Input.GetKeyDown(KeyCode.Space) == true && onGround == true)
         {
@@ -40,6 +40,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float moveHorizontal = Input.GetAxis("Horizontal"); float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        playerRB.AddForce(movement * speed);
         if (playerRB.velocity.y < 0)
         {
             playerRB.velocity += Vector3.up * Physics.gravity.y * fallMultiplier * Time.deltaTime;
@@ -56,13 +61,13 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(PowerUpCountdownRoutine());
         }
 
-        if (other.CompareTag("SlowTime"))
+        if (other.CompareTag("PauseEnemy"))
         {
             gotPowerup = true;
-            Time.timeScale = timeSpeed = 2f;
+            GameObject.Find("Enemy").GetComponent<Enemy>().enabled = false;
             Destroy(other.gameObject);
-            slowdownIndicator.gameObject.SetActive(true);
-            StartCoroutine(SlowDownTimeCountdownRoutine());
+            pauseEnemyIndicator.gameObject.SetActive(true);
+            StartCoroutine(PauseEnemyCountdownRoutine());
         }
 
         if (other.CompareTag("Death"))
@@ -90,11 +95,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator SlowDownTimeCountdownRoutine()
+    IEnumerator PauseEnemyCountdownRoutine()
     {
         yield return new WaitForSeconds(3);
-        Time.timeScale = timeSpeed = 1f;
-        slowdownIndicator.gameObject.SetActive(false);
+        GameObject.Find("Enemy").GetComponent<Enemy>().enabled = true;
+        pauseEnemyIndicator.gameObject.SetActive(false);
         gotPowerup = false;
     }
 

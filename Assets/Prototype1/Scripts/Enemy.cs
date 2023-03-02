@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed;
+    public float enemySpeed = 2;
     private Rigidbody enemyRB;
     private GameObject player;
     void Start()
     {
+        enemySpeed = 2f;
         enemyRB = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
     }
@@ -17,7 +18,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-        enemyRB.AddForce(lookDirection * speed);
+        enemyRB.AddForce(lookDirection * enemySpeed);
 
         if (transform.position.y < -10)
         {
