@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 2.0f;
     private bool onGround = true;
     public float fallMultiplier = 2.0f;
+    public GameObject deathUI;
 
     public float timeSpeed = 1;
     public GameObject slowdownIndicator;
@@ -62,6 +63,12 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             slowdownIndicator.gameObject.SetActive(true);
             StartCoroutine(SlowDownTimeCountdownRoutine());
+        }
+
+        if (other.CompareTag("Death"))
+        {
+            deathUI.SetActive(true);
+            Time.timeScale = 0;
         }
     }
      
