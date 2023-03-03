@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public Collectables collectables;
+    //public Collectables collectables;
    public void PrototypeOne()
    {
         //collectables.count = 0;
