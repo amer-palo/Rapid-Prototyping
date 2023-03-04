@@ -9,6 +9,7 @@ public class StartMenu : MonoBehaviour
    public void PrototypeOne()
    {
         //collectables.count = 0;
+        CountText.count = 0; 
         SceneManager.LoadScene("Prototype 1");
         Time.timeScale = 1;
    }
