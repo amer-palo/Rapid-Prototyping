@@ -10,6 +10,7 @@ TagManager:
   - SlowTime
   - Death
   - PauseEnemy
+  - Destroy
   layers:
   - Default
   - TransparentFX
