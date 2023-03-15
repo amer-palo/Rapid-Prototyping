@@ -14,6 +14,12 @@ public class StartMenu : MonoBehaviour
         Time.timeScale = 1;
    }
 
+    public void PrototypeTwo()
+    {
+        SceneManager.LoadScene("PrototypeTwo");
+        Time.timeScale = 1;
+    }
+
     public void Quit()
     {
         Application.Quit();
