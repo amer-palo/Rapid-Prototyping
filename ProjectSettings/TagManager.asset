@@ -11,6 +11,7 @@ TagManager:
   - Death
   - PauseEnemy
   - Destroy
+  - Bullet
   layers:
   - Default
   - TransparentFX

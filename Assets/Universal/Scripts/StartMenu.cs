@@ -20,6 +20,12 @@ public class StartMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void PrototypeThree()
+    {
+        SceneManager.LoadScene("PrototypeThree");
+        Time.timeScale = 1;
+    }
+
     public void Quit()
     {
         Application.Quit();

@@ -32,6 +32,12 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void Restart3()
+    {
+        SceneManager.LoadScene("PrototypeThree");
+        Time.timeScale = 1f;
+    }
+
     public void Menu()
     {
         SceneManager.LoadScene("Start");
