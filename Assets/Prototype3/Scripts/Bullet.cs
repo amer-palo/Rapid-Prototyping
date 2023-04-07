@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public GameObject player;
     public GameObject bullet;
+    public GameObject deathUI;
     public float bulletSpeed;
 
     private void Update()
@@ -25,6 +26,8 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("Dead");
             Destroy((player));
+            deathUI.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
