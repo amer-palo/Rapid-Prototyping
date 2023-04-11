@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MathManager : MonoBehaviour
+public class DivisionManager : MonoBehaviour
 {
     public TextMeshProUGUI firstNumber;
     public TextMeshProUGUI secondNumber;
@@ -38,7 +38,7 @@ public class MathManager : MonoBehaviour
 
         firstNumberProblem = randomFirstNumber;
         secondNumberProblem = randomSecondNumber;
-        answerOne = firstNumberProblem + secondNumberProblem;
+        answerOne = firstNumberProblem / secondNumberProblem;
         displayRandomAnswer = Random.Range(0, 2);
         if (displayRandomAnswer == 0)
         {
@@ -67,7 +67,7 @@ public class MathManager : MonoBehaviour
 
     public void ButtonAnwserOne()
     {
-        if(currentAnswer == 0)
+        if (currentAnswer == 0)
         {
             rightOrWrong.enabled = true;
             rightOrWrong.color = Color.green;
@@ -103,7 +103,7 @@ public class MathManager : MonoBehaviour
 
     public void TurnOffText()
     {
-        if(rightOrWrong != null)
+        if (rightOrWrong != null)
         {
             rightOrWrong.enabled = false;
         }
