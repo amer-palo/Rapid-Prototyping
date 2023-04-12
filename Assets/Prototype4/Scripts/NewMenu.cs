@@ -25,7 +25,7 @@ public class NewMenu : MonoBehaviour
 
     public void Divison()
     {
-        SceneManager.LoadScene("Divison");
+        SceneManager.LoadScene("Division");
         Time.timeScale = 1;
     }
 
