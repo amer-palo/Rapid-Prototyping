@@ -17,13 +17,13 @@ public class StartMenu : MonoBehaviour
     public void PrototypeTwo()
     {
         SceneManager.LoadScene("PrototypeTwo");
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
     public void PrototypeThree()
     {
         SceneManager.LoadScene("PrototypeThree");
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
     public void PrototypeFour()

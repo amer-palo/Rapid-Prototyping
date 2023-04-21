@@ -29,13 +29,13 @@ public class Pause : MonoBehaviour
         SceneManager.LoadScene("PrototypeTwo");
         LeavesCount.countGone = 0;
         LeavesCount.countSaved = 0;
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
     }
 
     public void Restart3()
     {
         SceneManager.LoadScene("PrototypeThree");
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
     }
 
 

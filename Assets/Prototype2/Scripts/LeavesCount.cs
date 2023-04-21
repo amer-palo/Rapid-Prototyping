@@ -12,8 +12,8 @@ public class LeavesCount : MonoBehaviour
 
     void Update()
     {
-        leavesGoneText.GetComponent<TextMeshProUGUI>().text = "Leaves unsaved: " + countGone;
-        leavesSavedText.GetComponent<TextMeshProUGUI>().text = "Leaves saved: " + countSaved;
+        leavesGoneText.GetComponent<TextMeshProUGUI>().text = "Leaves unsaved: " + countGone + "/3";
+        leavesSavedText.GetComponent<TextMeshProUGUI>().text = "Leaves saved: " + countSaved + "/20";
     }
 
 }

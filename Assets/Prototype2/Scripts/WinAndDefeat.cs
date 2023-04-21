@@ -10,7 +10,7 @@ public class WinAndDefeat : MonoBehaviour
 
     void Update()
     {
-        if(LeavesCount.countGone == 5)
+        if(LeavesCount.countGone == 3)
         {
             Time.timeScale = 0f;
             defeatUI.SetActive(true);

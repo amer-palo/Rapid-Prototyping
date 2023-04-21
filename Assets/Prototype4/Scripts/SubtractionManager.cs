@@ -73,6 +73,7 @@ public class SubtractionManager : MonoBehaviour
             rightOrWrong.color = Color.green;
             rightOrWrong.text = ("Correct");
             Invoke("TurnOffText", 1);
+            ScoreCounter.correctAnswer += 1;
         }
         else
         {
@@ -80,6 +81,7 @@ public class SubtractionManager : MonoBehaviour
             rightOrWrong.color = Color.red;
             rightOrWrong.text = ("Incorrect");
             Invoke("TurnOffText", 1);
+            ScoreCounter.incorrectAnswer += 1;
         }
     }
 
@@ -91,13 +93,15 @@ public class SubtractionManager : MonoBehaviour
             rightOrWrong.color = Color.green;
             rightOrWrong.text = ("Correct");
             Invoke("TurnOffText", 1);
+            ScoreCounter.correctAnswer += 1;
         }
         else
         {
-            rightOrWrong.enabled = true;
+            rightOrWrong.enabled = true; 
             rightOrWrong.color = Color.red;
             rightOrWrong.text = ("Incorrect");
             Invoke("TurnOffText", 1);
+            ScoreCounter.incorrectAnswer += 1;
         }
     }
 

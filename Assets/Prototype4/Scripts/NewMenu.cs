@@ -9,24 +9,24 @@ public class NewMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Addition");
         Time.timeScale = 1;
+        ScoreCounter.correctAnswer = 0;
+        ScoreCounter.incorrectAnswer = 0;
     }
 
     public void Subtraction()
     {
         SceneManager.LoadScene("Subtraction");
         Time.timeScale = 1;
+        ScoreCounter.correctAnswer = 0;
+        ScoreCounter.incorrectAnswer = 0;
     }
 
     public void Mutltiplication()
     {
         SceneManager.LoadScene("Multiplication");
         Time.timeScale = 1;
-    }
-
-    public void Divison()
-    {
-        SceneManager.LoadScene("Division");
-        Time.timeScale = 1;
+        ScoreCounter.correctAnswer = 0;
+        ScoreCounter.incorrectAnswer = 0;
     }
 
     public void Menu()
