@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype4/Scenes/Multiplication.unity
     guid: 5896d8f4fd8cdfd4a82b3e4147420c52
+  - enabled: 1
+    path: Assets/Prototype5/Scenes/Prototype 5.unity
+    guid: db5a3322d8a2fe948917e255471787e5
   m_configObjects: {}
