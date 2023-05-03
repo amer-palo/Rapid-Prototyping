@@ -12,6 +12,7 @@ TagManager:
   - PauseEnemy
   - Destroy
   - Bullet
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - BackGround
   - 
   - 
   - 
@@ -48,4 +49,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Back
+    uniqueID: 2517384813
     locked: 0
