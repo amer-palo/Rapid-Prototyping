@@ -13,6 +13,7 @@ TagManager:
   - Destroy
   - Bullet
   - Key
+  - Finished
   layers:
   - Default
   - TransparentFX
