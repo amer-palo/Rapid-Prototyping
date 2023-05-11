@@ -11,6 +11,8 @@ public class TwoDController : MonoBehaviour
     public GameObject deathScreen;
     public int keyCount;
     public GameObject door;
+    public GameObject doorTwo;
+    public GameObject winnerUI;
     void Start()
     {
         
@@ -52,9 +54,10 @@ public class TwoDController : MonoBehaviour
         if(keyCount == 3)
         {
             door.SetActive(false);
+            doorTwo.SetActive(false);
         }
-         
-        if(collision.gameObject.tag == "Enemy")
+
+        if (collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
             Time.timeScale = 0;
@@ -64,6 +67,12 @@ public class TwoDController : MonoBehaviour
         if(collision.gameObject.tag == "Finish")
         {
             SceneManager.LoadScene("Level 2");
-        }    
+        }
+
+        if (collision.gameObject.tag == "End")
+        {
+            Time.timeScale = 0;
+            winnerUI.SetActive(true);
+        }
     }
 }
