@@ -13,6 +13,7 @@ public class TwoDController : MonoBehaviour
     public GameObject door;
     public GameObject doorTwo;
     public GameObject winnerUI;
+    public GameObject rulesUI;
     void Start()
     {
         
@@ -36,6 +37,27 @@ public class TwoDController : MonoBehaviour
             transform.Translate(0, speed * Time.deltaTime, 0, 0);
         }
         if (Input.GetKey(KeyCode.S))
+        {
+            //player.AddForce(new Vector2(0, -speed));
+            transform.Translate(0, -speed * Time.deltaTime, 0, 0);
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            //player.AddForce(new Vector2(-speed, 0));
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            //player.AddForce(new Vector2(speed, 0));
+            transform.Translate(speed * Time.deltaTime, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            //player.AddForce(new Vector2(0, speed));
+            transform.Translate(0, speed * Time.deltaTime, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             //player.AddForce(new Vector2(0, -speed));
             transform.Translate(0, -speed * Time.deltaTime, 0, 0);
@@ -74,5 +96,11 @@ public class TwoDController : MonoBehaviour
             Time.timeScale = 0;
             winnerUI.SetActive(true);
         }
+    }
+
+    public void RulesScreen()
+    {
+        rulesUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

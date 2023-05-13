@@ -35,7 +35,7 @@ public class StartMenu : MonoBehaviour
     public void PrototypeFive()
     {
         SceneManager.LoadScene("Prototype 5");
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
     public void Quit()
